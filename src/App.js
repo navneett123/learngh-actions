@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Tile from "./components/Tile";
+import tilesData from "./data/tilesData";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>🚀 GitHub Actions Guide</h1>
+      <p className="subhead">Explore the building blocks of GitHub automation</p>
+      <div className="grid">
+        {tilesData.map((tile, index) => (
+          <Tile key={index} title={tile.title} desc={tile.desc} />
+        ))}
+      </div>
+      <button className="learn-btn">Learn More</button>
     </div>
   );
 }
