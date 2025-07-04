@@ -23,6 +23,12 @@ const tilesData = [
     title: "💬 YAML Basics",
     desc: "Syntax rules: spacing, indentation, and nesting matter!",
   },
+
+  {
+  title: "📦 Artifacts",
+  desc: "Upload and persist workflow build outputs for reuse."
+}
+
 ];
 
 export default tilesData;
